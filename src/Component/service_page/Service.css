@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+  }
+  
+  .service-heading{
+    color: #216d3f;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  
+  .service-description{
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+  
+  }
+  
+  .viewmore-button{
+    text-align: right;
+  }
+  
+  .viewmore-services-btn{
+    text-align: center;
+    margin-top: 60px;
+    color: #216d3f;
+    font-weight: bold;
+  } 
+  
+  .viewmore-services-btn button {
+    background-color: #216d3f;
+    width: 190px;
+    min-height: 45px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: 500;
+    border-width: 0px;
+    margin-bottom: 50px;
+  }
+  
+  .viewmore-button a {
+    color: #216d3f;
+    text-decoration: none;
+  } 
+  
+  .service-image-con{
+    position: relative;
+  
+  }
+  
+  
+  .absolute-box1 {
+    background-color: #f3e4e493;
+    opacity: 3rem; 
+    width: 230px;
+    padding: 20px;
+    border-radius: 10px; 
+    position: absolute;
+    top: -80px;
+    left: -60px;
+  }
+  
+  .absolute-box2 {
+    background-color: #f3e4e493;
+    opacity: 3rem; 
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px; 
+    position: absolute;
+    bottom: -80px;
+    right: -60px;
+   
+  } 
+  .absolute-box1 p {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .absolute-box2 p {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .logo-custom-design{
+    background-color: #c9c9cb;
+    border-radius: 20px;  
+    margin-right: 10px; 
+    padding: 5px;
+  }
+  
+  .contactUs-btn{
+    background-color: #216d3f;
+    border-radius: 20px;
+    border-width: 0px;
+    color: #ffffff;
+    height: 40px;
+    width: 140px;
+    font-weight: bold;
+  }
+  
+  .betterway-con{
+    
+    text-align: center; 
+  }
+  
+  .betterway-con h3 {
+    color: #216d3f;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 100px;
+  }
+  
+  .betterway-con p {
+    
+    font-size: 17px;
+  }
+  
+  .service-bottom-con{
+    background-image: url('../../Images/service/Rectangle 4592.png');  
+    background-size: cover;
+    min-height: 100vh; 
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: flex-end; 
+   
+    flex-wrap: wrap; 
+    
+  }
+  
+  
+  .service-bottom-card{
+    background-color: #c9c9cb;
+    opacity: 0.8;
+    width: 360px;
+    
+    border-radius: 20px;
+    padding: 30px;
+  
+  }
+  
+  .service-bottom-card2{
+    background-color: #c9c9cb;
+    opacity: 0.8;
+    width: 360px;
+    align-self: flex-start;
+    
+    border-radius: 20px;
+    padding: 30px;
+  
+  }
+  
+  .service-bottom-card, .service-bottom-card2 h1 {
+    font-size: 32px;
+    color: black;
+  }
+  
+  .service-bottom-card, .service-bottom-card2 p {
+    font-size: 17px; 
+  
+  }
+  
+  .custom-design{
+    background-color: #ffffff;
+    border-radius: 20px; 
+  }   
+  
+  @media (max-width:800px) {
+      .service-image-con{
+        margin-top: 90px;
+      }
+  
+  } 
+  
+  @media (max-width: 600px) {
+    .absolute-box1 {
+      background-color: #f3e4e493;
+      opacity: 3rem; 
+      width: 190px;
+      padding: 20px;
+      border-radius: 10px; 
+      position: absolute;
+      top: -180px;
+      left: -30px;
+    } 
+    .service-heading{
+      font-size: 30px;
+        
+    }
+    .absolute-box1 p {
+      font-size: 14px;
+     
+    }
+    .logo-custom-design{
+      size: 0.5rem;
+    }
+   
+    .absolute-box2 {
+      background-color: #f3e4e493;
+      opacity: 3rem; 
+      width: 230px;
+      padding: 20px;
+      border-radius: 10px; 
+      position: absolute;
+      bottom: -180px;
+      right: -10px;
+     
+    } 
+    .absolute-box2 p {
+      font-size: 14px;
+    }
+    .service-image-con{
+      margin: 30 px;
+    }
+    .service-text-con{
+      padding-top: 120px;
+    }
+  
+  } 
