@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import './Login.css'
-import {FaEye ,FaEyeSlash} from "react-icons/fa";
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import { FcGoogle } from "react-icons/fc";
-import { FaApple } from "react-icons/fa";
+import React, { useState } from 'react';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import './Login.css';
+// import { FcGoogle } from "react-icons/fc";
+// import { FaApple } from "react-icons/fa";
 import Image1 from "../../Images/Login/Rectangle 4597.png";
 import Footer from '../Footer';
 

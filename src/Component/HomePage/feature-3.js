@@ -1,9 +1,9 @@
-import React from 'react'
+import { faBullhorn, faFileExcel, faPlayCircle, faUnlink } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 import orange from "../../Images/Knowledge/orange.png";
 import "./feature-3.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBullhorn, faFileExcel, faPlayCircle, faUnlink } from '@fortawesome/free-solid-svg-icons';
-import { Container } from 'react-bootstrap';
+// import { Container } from 'react-bootstrap';
 const Feature3 = () => {
   return (
     

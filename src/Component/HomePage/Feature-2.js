@@ -1,8 +1,8 @@
-import React from 'react'
-import "./feature-2.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen, faBriefcase, faLaptop, faMessage } from '@fortawesome/free-solid-svg-icons';
-import { Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import "./feature-2.css";
+// import { Container } from 'react-bootstrap';
 
 const Feature2 = () => {
   return (
