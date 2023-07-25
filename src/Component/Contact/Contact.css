@@ -151,7 +151,7 @@ form button {
 /* Responsive */
 
 @media screen and (max-width: 768px) {
-  .container{
+  .container-main{
     padding: 0.5rem 1rem;
   }
   .contact-container {
