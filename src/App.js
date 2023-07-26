@@ -6,7 +6,6 @@ import Service from './Component/service_page/ServiceApp'
 import React from 'react';
 import Contact from './Component/Contact/Contact'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar  from "./Navbar";
 import './App.css'
 import Login from './Component/LoginPage/Login'
 import HomePage from './Component/HomePage/Home'
@@ -15,7 +14,7 @@ const App = () =>{
     <>
     <Router>
       <div>
-        <Navbar />
+        <HomePage />
         <main>
           <Routes>
             <Route path="/senheader"  element={<SenHeader/>} />
