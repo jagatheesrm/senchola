@@ -1,8 +1,8 @@
 .people-1 ,.people-2 ,.people-3 ,.people-4{
     background-color: rgb(255, 250, 239);
-    width:200px;
-    margin:10px 20px;
-    box-sizing: content-box
+    box-sizing: content-box;
+    margin-right:5%;
+    margin-bottom:20px;
 }
 .testimonial-title{
     color:green
@@ -11,3 +11,8 @@
     margin-top: 10%;
 }
 
+@media(min-width:992px){
+    .people-1,.people-2,.people-3,.people-4{
+        margin-right: 50px;
+    }
+}

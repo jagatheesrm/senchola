@@ -7,10 +7,10 @@ import "./feature-3.css";
 const Feature3 = () => {
   return (
     
-      <div className='feature3-main-content p-sm-5 d-lg-flex flex-lg-row flex-md-row flex-column-reverse '>
+      <div className='feature3-main-content  d-lg-flex flex-lg-row flex-md-row '>
         {/* Left Section */}
-        <div className='feature3-left-content mx-xl-5'>
-          <img src={orange} className='orange p-sm-3' alt='Orange' />
+        <div className='feature3-left-content  '>
+          <img src={orange} className='orange' alt='Orange' />
           <div className='feature3-box'>
             <div className="row">
               <div className="col-md-10 col-lg-8">
@@ -45,7 +45,7 @@ const Feature3 = () => {
         </div>
 
         {/* Right Section */}
-        <div className='feature3-right-content p-sm-5 col-lg-6 mx-xl-5'>
+        <div className='feature3-right-content  col-lg-4 mx-lg-5 '>
           <h1>Learn Without Limit and Spread Knowledge</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat semper viverra nam.
