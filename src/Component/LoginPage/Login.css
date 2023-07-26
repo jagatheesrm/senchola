@@ -71,3 +71,10 @@ justify-content: center;
 span{
     
 }
+@media screen and (max-width: 480px) {
+    .Loginform{
+        padding-left: 2em;
+    }
+    
+  }
+  

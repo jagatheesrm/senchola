@@ -30,7 +30,7 @@ const Login = () => {
       <div className="login-section mt-5 ">
         <Container>
           <Row>
-            <Col lg={6} className='Loginform' >
+            <Col lg={6} className='Loginform ' >
               <h1>LOGIN FORM</h1>
               <h3>Welcome back!</h3>
               <p>Enter Your Credential Details to access your account</p>
