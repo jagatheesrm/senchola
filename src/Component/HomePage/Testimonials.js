@@ -12,9 +12,9 @@ const Testimonials = () => {
       <p>what people say about us</p>
       </div>
       <Container >
-      <div className='container '> 
+      <div className='container  '> 
       <div className='row my-lg-5'>
-        <div className='people-1 col col-lg-2 col-md-4 col-8 p-4'>
+        <div className='people-1 col  col-md-4 col-xl-2 p-4'>
            <img src={star} alt=''></img>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat semper viverra nam.</p>
            <div className='d-flex'>
@@ -26,7 +26,7 @@ const Testimonials = () => {
            </div>
         </div>
        
-        <div className='people-2 col col-lg-2 col-md-4 col-8 p-4'>
+        <div className='people-2 col  col-md-4 col-xl-2 p-4'>
         <img src={star} alt=''></img>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat semper viverra nam.</p>
         <div className='d-flex'>
@@ -37,7 +37,7 @@ const Testimonials = () => {
            </div>
            </div>
         </div>
-        <div className='people-3 col col-lg-2 col-md-4 col-8 p-4'>
+        <div className='people-3 col  col-md-4 col-xl-2 p-4'>
         <img src={star} alt=''></img>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat semper viverra nam.</p>
         <div className='d-flex'>
@@ -48,7 +48,7 @@ const Testimonials = () => {
            </div>
            </div>
         </div>
-        <div className='people-4 col col-lg-2 col-md-4 col-8 p-4'>
+        <div className='people-4 col col-md-4 col-xl-2 p-4'>
         <img src={star} alt=''></img>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus accumsan tortor posuere ac ut consequat semper viverra nam.</p>
         <div className='d-flex'>

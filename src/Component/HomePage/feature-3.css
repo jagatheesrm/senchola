@@ -57,20 +57,33 @@
     background-color: aliceblue;
     border-radius: 50%;
 }
+
 @media (max-width:576px){
     .feature3-box{
         height: 200px;
         width: 200px;
         background-color:#F5F5F580;
         position: relative;
-        left:50px;
-        bottom:60px;
+        left:80px;
+        bottom:70px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
+    .orange{
+        height:450px;
+        width:300px;
+        margin:30px;
+    }
 }
-    @media (min-width:1200px){
-     .feature3-main-content{
-        margin-left:14%
-     }       
+    @media (min-width:576px){
+            
+        .feature3-main-content{
+            margin-left:14%;
+        }
+    }
+        @media (min-width:1025px){
+            
+            .feature3-main-content{
+                margin-left:20%;
+            }
     
 }
