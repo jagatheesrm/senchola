@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Getting Started!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Clone the Repository
 
-## Available Scripts
+    git clone https://github.com/jagatheesrm/senchola-pro.git
 
-In the project directory, you can run:
+    cd senchola-pro
 
-### `npm start`
+## Set User Name
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    git config --global user.name "Your Name"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Set Email Address
 
-### `npm test`
+    git config --global user.email "your.email@example.com"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## List Branches:
 
-### `npm run build`
+    git branch
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Check Current Branch:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    git rev-parse --abbrev-ref HEAD
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Switch to the Test-Push Branch
 
-### `npm run eject`
+    git checkout test-push
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Pull Changes from the Main Branch
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    git pull origin main
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Make Changes and Commit
 
-## Learn More
+    git add .
+    git commit -m "Description of the changes in the test-push branch"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Push Changes to Remote (Test-Push Branch)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    git push origin test-push
 
-### Code Splitting
+# Test (test-Push) Branch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Clone the Repository with the Test-Push Branch:
 
-### Analyzing the Bundle Size
+    git clone -b test-push https://github.com/jagatheesrm/senchola-pro.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    cd senchola-pro
 
-### Making a Progressive Web App
+## List Branches:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    git branch
 
-### Advanced Configuration
+## Check Current Branch:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    git rev-parse --abbrev-ref HEAD
 
-### Deployment
+<!-- ## Create and Switch to the Test-Project Branch:
+    git checkout -b test-project
+    -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Switch to the Test-Push Branch
 
-### `npm run build` fails to minify
+    git checkout test-project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Pull Changes from the Test-Push Branch
+
+    git pull origin test-push
+
+## Make Changes and Commit
+
+    git add .
+
+    git commit -m "Description of the changes in the test-project branch"
+
+## Push Changes to Remote (Test-Project Branch)
+
+    git push origin test-project
+
+## Clone the Repository with the Test-Project Branch
+
+    git clone -b test-project https://github.com/jagatheesrm/senchola-pro.git
+
+## Navigate into the Project Directory
+
+    cd senchola-pro
+
+## Switch to the Main Branch:
+
+    git checkout -b main origin/main
+
+## Pull Changes from the Main Branch (Optional):
+
+    git pull origin main
+
+## Make Changes and Commit:
+
+    git add .
+    git commit -m "Description of the changes in the main branch"
+
+## Push Changes to Remote (Main Branch):
+
+    git push origin main
+
+
+# To deploy a React.js project
+
+## Create a production build:
+    npm run build
+
+## Deploy to GitHub Pages:
+    npm run deploy
