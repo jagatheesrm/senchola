@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/senchola-pro/static/css/main.5f25d1e4.css",
-    "main.js": "/senchola-pro/static/js/main.1723bcb8.js",
+    "main.js": "/senchola-pro/static/js/main.945b57ce.js",
     "static/js/787.400a5012.chunk.js": "/senchola-pro/static/js/787.400a5012.chunk.js",
     "static/media/team3.jpg": "/senchola-pro/static/media/team3.7284e4b721e6ac1c8ae6.jpg",
     "static/media/team4.jpg": "/senchola-pro/static/media/team4.7db43f77ecc5b6c7e136.jpg",
@@ -42,11 +42,11 @@
     "static/media/Rectangle 20.png": "/senchola-pro/static/media/Rectangle 20.509289f6122bb8983ebd.png",
     "index.html": "/senchola-pro/index.html",
     "main.5f25d1e4.css.map": "/senchola-pro/static/css/main.5f25d1e4.css.map",
-    "main.1723bcb8.js.map": "/senchola-pro/static/js/main.1723bcb8.js.map",
+    "main.945b57ce.js.map": "/senchola-pro/static/js/main.945b57ce.js.map",
     "787.400a5012.chunk.js.map": "/senchola-pro/static/js/787.400a5012.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f25d1e4.css",
-    "static/js/main.1723bcb8.js"
+    "static/js/main.945b57ce.js"
   ]
 }
