@@ -18,14 +18,14 @@ const App = () =>{
         <Navbar />
         <main>
           <Routes>
-            <Route path="^/senheader"  element={<SenHeader/>} />
+            <Route path="/senheader"  element={<SenHeader/>} />
             <Route path="/about" element={<About1/>} />
             <Route path="/services" element={<Service/>} />
             <Route path="/form" element={<Form/>} />
             <Route path="/signup" element={<SignUp/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/contact" element={<Contact/>}/>
-            <Route path='senchola/' element={<HomePage/>} exact />
+            <Route path='/' element={<HomePage/>} exact />
           </Routes>
         </main>
       </div>
