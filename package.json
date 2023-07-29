@@ -2,7 +2,7 @@
   "name": "sen-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jagatheesrm.github.io/senchola-pro/",
+  "homepage": "https://jagatheesrm.github.io/senchola/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
