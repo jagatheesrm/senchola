@@ -1,4 +1,26 @@
 const User = require('../models/User');
+const nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
+dotenv.config();
+
+const sendWelcomeEmail = async (email) => {
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.GMAIL_USER,
+    to: email,
+    subject: 'Welcome to our website',
+    text: 'Thank you for registering on our website!',
+  };
+
+  await transporter.sendMail(mailOptions);
+};
 
 const UserController = {
   registerUser: async (req, res) => {
@@ -20,7 +42,7 @@ const UserController = {
         howDidYouKnow,
       } = req.body;
 
-      // Check if the email already exists in the database
+      // Check if the email already exists
       const existingUser = await User.findOne({ email });
       if (existingUser) {
         return res.status(400).json({ message: 'Email already registered' });
@@ -47,6 +69,9 @@ const UserController = {
       // Save the user to the database
       await newUser.save();
 
+      // Send welcome email
+      await sendWelcomeEmail(newUser.email);
+
       res.status(201).json({ message: 'Registration successful', user: newUser });
     } catch (error) {
       console.error('Error registering user:', error);
@@ -56,33 +81,3 @@ const UserController = {
 };
 
 module.exports = UserController;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
