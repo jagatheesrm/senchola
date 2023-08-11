@@ -15,7 +15,8 @@ const userSchema = new mongoose.Schema({
   wantToLearn: { type: String, required: true },
   hasLaptop: { type: String, required: true },
   howDidYouKnow: { type: String, required: true },
-}, { timestamps: true }); // Adds createdAt and updatedAt fields
+  password: { type: String, default: null },
+}, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
 

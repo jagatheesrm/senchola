@@ -1,9 +1,26 @@
 const User = require('../models/User');
 const nodemailer = require('nodemailer');
+const fs = require('fs');
+const path = require('path');
+const handlebars = require('handlebars');
 const dotenv = require('dotenv');
+const crypto = require('crypto');
 dotenv.config();
 
-const sendWelcomeEmail = async (email) => {
+
+
+const sendWelcomeEmail = async (email, fullName, token) => {
+
+  const tokenLink = `${process.env.CLIENT_URL}/set-password/${token}`;
+
+  // HTML template file
+  const filePath = path.join(__dirname, '../email-template/welcome_email.html');
+  const source = fs.readFileSync(filePath, 'utf-8');
+
+  const template = handlebars.compile(source);
+
+  const emailContent = template({ fullName, tokenLink});
+
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -16,7 +33,7 @@ const sendWelcomeEmail = async (email) => {
     from: process.env.GMAIL_USER,
     to: email,
     subject: 'Welcome to our website',
-    text: 'Thank you for registering on our website!',
+    html: emailContent,
   };
 
   await transporter.sendMail(mailOptions);
@@ -66,13 +83,18 @@ const UserController = {
         howDidYouKnow,
       });
 
+      newUser.password = req.body.password;
+
       // Save the user to the database
+      await newUser.save();
+      const token = crypto.randomBytes(20).toString('hex');
+      newUser.password = token;
       await newUser.save();
 
       // Send welcome email
-      await sendWelcomeEmail(newUser.email);
+      await sendWelcomeEmail(newUser.email, newUser.fullName, newUser.password);
 
-      res.status(201).json({ message: 'Registration successful', user: newUser });
+      res.status(201).json({ message: 'Registration successful', user: newUser.fullName });
     } catch (error) {
       console.error('Error registering user:', error);
       res.status(500).json({ message: 'Internal server error' });
