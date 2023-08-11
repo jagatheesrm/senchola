@@ -9,9 +9,9 @@ dotenv.config();
 
 
 
-const sendWelcomeEmail = async (email, fullName, token) => {
+const sendWelcomeEmail = async (email, fullName, token0) => {
 
-  const tokenLink = `${process.env.CLIENT_URL}/set-password/${token}`;
+  const tokenLink = `${process.env.CLIENT_URL}/set-password/${token0}`;
 
   // HTML template file
   const filePath = path.join(__dirname, '../email-template/welcome_email.html');
@@ -87,8 +87,8 @@ const UserController = {
 
       // Save the user to the database
       await newUser.save();
-      const token = crypto.randomBytes(20).toString('hex');
-      newUser.password = token;
+      const token0 = crypto.randomBytes(20).toString('hex');
+      newUser.password = token0;
       await newUser.save();
 
       // Send welcome email
