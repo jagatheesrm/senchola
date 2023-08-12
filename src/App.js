@@ -14,7 +14,7 @@ import Navbar from './Navbar';
 const App = () =>{
   return(
     <>
-    <Router Router basename="/senchola">
+    <Router Router basename="/">
       <div>
         <Navbar />
         <main>
