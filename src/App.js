@@ -1,8 +1,9 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import About1 from "./Component/About1";
 import Contact from './Component/Contact/Contact';
+import GeneratePassword from './Component/GeneratePassword';
 import HomePage from './Component/HomePage/Home';
 import Login from './Component/LoginPage/Login';
 import SignUp from "./Component/SignUp";
@@ -13,7 +14,7 @@ import Navbar from './Navbar';
 const App = () =>{
   return(
     <>
-    <Router>
+    <Router Router basename="/senchola">
       <div>
         <Navbar />
         <main>
@@ -25,6 +26,7 @@ const App = () =>{
             <Route path="/signup" element={<SignUp/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/contact" element={<Contact/>}/>
+            <Route path="/generate-password/:token" element={GeneratePassword} />
             <Route path='/' element={<HomePage/>} exact />
           </Routes>
         </main>

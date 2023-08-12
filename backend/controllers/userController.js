@@ -11,7 +11,7 @@ dotenv.config();
 
 const sendWelcomeEmail = async (email, fullName, token0) => {
 
-  const tokenLink = `${process.env.CLIENT_URL}/set-password/${token0}`;
+  const tokenLink = `${process.env.CLIENT_URL}/generate-password/${token0}`;
 
   // HTML template file
   const filePath = path.join(__dirname, '../email-template/welcome_email.html');
