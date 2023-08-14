@@ -45,15 +45,39 @@ const Form = () => {
       });
     } catch (error) {
       console.error('Error registering user:', error);
-      toast.error('Registration failed. Please try again.', {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      if (error.response && error.response.data && error.response.data.message) {
+        toast.error(error.response.data.message, {
+          position: 'top-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+      else if (error.message === 'Network Error') {
+        toast.error('Could not connect to the server. Please try again later.', {
+          position: 'top-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+      else {
+        toast.error('Registration failed. Please try again.', {
+          position: 'top-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
     }
   };
 
@@ -76,6 +100,7 @@ const Form = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -86,8 +111,9 @@ const Form = () => {
                   name="gender"
                   value={formData.gender}
                   onChange={handleChange}
+                  required
                 >
-                  <option value="">--Select Gender--</option>
+                  <option value="" required>--Select Gender--</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="other">Other</option>
@@ -103,6 +129,7 @@ const Form = () => {
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -115,6 +142,7 @@ const Form = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -127,6 +155,7 @@ const Form = () => {
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -140,6 +169,7 @@ const Form = () => {
                   name="city"
                   value={formData.city}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -152,6 +182,7 @@ const Form = () => {
                   name="state"
                   value={formData.state}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -164,6 +195,7 @@ const Form = () => {
                   name="qualification"
                   value={formData.qualification}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -176,6 +208,7 @@ const Form = () => {
                   name="degree"
                   value={formData.degree}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -188,6 +221,7 @@ const Form = () => {
                   name="passOutYear"
                   value={formData.passOutYear}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -200,6 +234,7 @@ const Form = () => {
                   name="collegeName"
                   value={formData.collegeName}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -212,6 +247,7 @@ const Form = () => {
                   name="wantToLearn"
                   value={formData.wantToLearn}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="user-input-box">
@@ -221,6 +257,7 @@ const Form = () => {
                   className="select-degree-box"
                   name="hasLaptop"
                   value={formData.hasLaptop}
+                  required
                   onChange={handleChange}
                 >
                   <option value="">--Select Option--</option>
@@ -238,6 +275,7 @@ const Form = () => {
                   name="howDidYouKnow"
                   value={formData.howDidYouKnow}
                   onChange={handleChange}
+                  required
                 />
               </div>
 

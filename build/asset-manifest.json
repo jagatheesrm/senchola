@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/senchola/static/css/main.501a914c.css",
-    "main.js": "/senchola/static/js/main.a2bdecc7.js",
+    "main.js": "/senchola/static/js/main.89dc4ad3.js",
     "static/js/787.c5269106.chunk.js": "/senchola/static/js/787.c5269106.chunk.js",
     "static/media/team3.jpg": "/senchola/static/media/team3.7284e4b721e6ac1c8ae6.jpg",
     "static/media/team4.jpg": "/senchola/static/media/team4.7db43f77ecc5b6c7e136.jpg",
@@ -42,11 +42,11 @@
     "static/media/Rectangle 20.png": "/senchola/static/media/Rectangle 20.509289f6122bb8983ebd.png",
     "index.html": "/senchola/index.html",
     "main.501a914c.css.map": "/senchola/static/css/main.501a914c.css.map",
-    "main.a2bdecc7.js.map": "/senchola/static/js/main.a2bdecc7.js.map",
+    "main.89dc4ad3.js.map": "/senchola/static/js/main.89dc4ad3.js.map",
     "787.c5269106.chunk.js.map": "/senchola/static/js/787.c5269106.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.501a914c.css",
-    "static/js/main.a2bdecc7.js"
+    "static/js/main.89dc4ad3.js"
   ]
 }

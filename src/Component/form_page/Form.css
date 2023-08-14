@@ -156,14 +156,14 @@ body{
   margin: 25px 0 25px;
   
 }  
-
 .Toastify__toast-container {
   position: fixed;
   top: 5rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1001; /* Adjust z-index as needed */
+  z-index: 1001; 
 }
+
 
 @media (max-width: 600px) {
   .form-card-container{

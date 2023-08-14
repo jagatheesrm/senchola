@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const GeneratorPassword = () => {
   const [passwordData, setPasswordData] = useState({
-    token: '',
+    token0: '',
     password: '',
     confirmPassword: '',
   });
@@ -17,12 +18,13 @@ const GeneratorPassword = () => {
       [name]: value,
     }));
   };
-
+  const navigate = useNavigate();
   const handleGeneratePassword = async () => {
     try {
       const response = await axios.post('localhost:5000/api/generate-password', passwordData);
       if (response.status === 200) {
         toast.success('Password set successfully!');
+        navigate('/login');
       }
     } catch (error) {
       console.error('Error setting password:', error);
