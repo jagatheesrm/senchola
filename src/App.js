@@ -28,7 +28,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/generate-password" element={GeneratePassword} />
+              <Route path="/generate-password/:token" element={<GeneratePassword />} />
               <Route path='/' element={<HomePage />} exact />
             </Routes>
           </main>
