@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px; 
+}
+
+
+.form-card-container{
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px; 
+  background-color: #f2f2f2;
+  padding: 30px 30px 30px;  
+  box-shadow: 1px 2px 2px lightblue; 
+  margin: 0px auto;
+  margin-bottom: 5px;
+} 
+
+.form-container{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+  padding: 20px 30px 20px; 
+  
+} 
+
+.user-input-box:nth-child(2n) {
+  justify-content: end;
+}
+
+.user-input-box{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
+} 
+
+
+.asterisk{
+  color: red;
+ 
+
+}
+
+.project-heading{
+  color: #216d3f;
+  font-size: 30px;
+  
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-heading {
+  color: #3e3e3e;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+.user-input-box label {
+  color: #3e3e3b;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  width: 85%;
+}
+                                  
+.input-box{
+  margin-top: 10px;
+  border-width: 0px;
+  height: 36px;
+  width: 85%;
+  border-radius: 4px;
+  font-size: 1em;
+  padding: 10px;
+  box-shadow: 1px 2px 2px lightblue; 
+} 
+ 
+
+.user-input-box select{
+  border-width: 0px;
+  height: 36px;
+  width: 85%;
+  border-radius: 4px;
+  background-color: #ffffff; 
+  font-size: 1em;
+  padding-left: 10px; 
+  border-right: 10px solid transparent; 
+  margin-top: 10px;
+  box-shadow: 1px 2px 2px lightblue; 
+} 
+
+.upload-file-box{
+  border-width: 0px;
+  height: 36px;
+  width: 85%;
+  border-radius: 4px;
+  background-color: #ffffff; 
+  font-size: 1em;
+  padding-top: 6px; 
+  margin-top: 10px;
+
+  box-shadow: 1px 2px 2px lightblue; 
+}
+
+.select-date-box {
+  border-width: 0px;
+  height: 36px;
+  width: 85%;
+  border-radius: 4px;
+  background-color: #ffffff; 
+  font-size: 1em;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 1px 2px 2px lightblue; 
+} 
+
+
+::-webkit-file-upload-button{
+  background-color: #e3e3e3;
+  border-width: 0px; 
+  font-size: 1em;
+  margin-left: 10px;
+
+}
+
+
+
+.register-button{
+  background-color: #216d3f;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  border-width: 0px;
+  height: 50px ;
+  width: 70%;
+  font-size: 19px;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 25px;
+  
+}  
+.Toastify__toast-container {
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001; 
+}
+
+
+@media (max-width: 600px) {
+  .form-card-container{
+    min-width: 250px;
+  }
+
+ 
+  .user-input-box{
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  .input-box{
+    width: 100%;
+  }
+  .user-input-box select{
+    width: 100%;
+    font-size: 0.8em;
+  }
+  .select-date-box{
+    width: 100%; 
+    font-size: 0.8em;
+  }
+  .upload-file-box{
+    width: 100%;
+    font-size: 0.8em;
+  }
+  .user-input-box label {
+    width: 87%;
+  }
+
+  .user-input-box:nth-child(2n){
+    justify-content: space-between; 
+  } 
+  .form-container{
+    max-height: 500px;
+    overflow: auto;
+  }
+  .form-container::-webkit-scrollbar{
+    width: 0;
+  }
+
+
+}
+

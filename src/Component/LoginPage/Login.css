@@ -1,0 +1,80 @@
+body{
+    margin:0;
+
+}
+
+
+.required::after{
+    content: "*";
+    color: red;
+    font-size: 20px;
+    
+
+}
+.pass{
+    
+   position: relative;
+
+}
+.password-toggle-icon{
+    position: absolute;
+    top:42px;
+    right: 10px;
+    z-index: 1000;
+    cursor: pointer;
+
+
+   
+}
+.Loginform{
+    padding-left: 70px;
+}
+
+
+/* .btn{
+justify-content: center;
+} */
+
+.signup{
+    padding-left: 10px;
+}
+
+.or{
+    text-align: center;
+    position: relative;
+}
+.or::before{
+    content: "";
+    display: block;
+    width: 170px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    z-index: -2;
+    
+}
+.or::after{
+    content: "";
+    display: block;
+    width: 170px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 10px;
+    right:1px;
+    z-index: -2;
+
+    
+}
+span{
+    
+}
+@media screen and (max-width: 480px) {
+    .Loginform{
+        padding-left: 2em;
+    }
+    
+  }
+  
