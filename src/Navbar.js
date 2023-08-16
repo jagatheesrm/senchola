@@ -35,9 +35,15 @@ const Navbar = () => {
           <li className='bn nav-item'>
             <NavLink to="/login" className="nav-link" onClick={toggleMenu}>login</NavLink>
           </li>
+<<<<<<< HEAD
           {/* <li className='bn bn-success nav-item'>
             <NavLink to="/signup" className="nav-link" onClick={toggleMenu}>Sign up</NavLink>
           </li> */}
+=======
+          <li className='bn bn-success nav-item'>
+            <NavLink to="/signup" className="nav-link" onClick={toggleMenu}>Sign up</NavLink>
+          </li>
+>>>>>>> cce9739bc029e8ef4062721c9a59b59feeefe239
         </ul>
       </div>
       <div className="hamburger" onClick={toggleMenu}>

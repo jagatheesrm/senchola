@@ -156,6 +156,7 @@ body{
   margin: 25px 0 25px;
   
 }  
+<<<<<<< HEAD
 .Toastify__toast-container {
   position: fixed;
   top: 5rem;
@@ -163,6 +164,8 @@ body{
   transform: translateX(-50%);
   z-index: 1001; 
 }
+=======
+>>>>>>> cce9739bc029e8ef4062721c9a59b59feeefe239
 
 
 @media (max-width: 600px) {

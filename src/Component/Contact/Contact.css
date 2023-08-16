@@ -152,7 +152,11 @@ form button {
 
 @media screen and (max-width: 768px) {
   .container-main{
+<<<<<<< HEAD
     padding: 0.5rem 0.2em;
+=======
+    padding: 0.5rem 1rem;
+>>>>>>> cce9739bc029e8ef4062721c9a59b59feeefe239
   }
   .contact-container {
     flex-direction: column;

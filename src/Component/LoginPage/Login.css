@@ -70,6 +70,7 @@ justify-content: center;
 }
 span{
     
+<<<<<<< HEAD
 }
 @media screen and (max-width: 480px) {
     .Loginform{
@@ -78,3 +79,6 @@ span{
     
   }
   
+=======
+}
+>>>>>>> cce9739bc029e8ef4062721c9a59b59feeefe239
