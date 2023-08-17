@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Servicecard from './Servicecard';
-
 import {FcAssistant, FcBusinessContact, FcHeadset, 
     FcSalesPerformance,FcBullish,FcTemplate,FcVoicemail,FcAndroidOs} from "react-icons/fc"
 
@@ -31,7 +30,7 @@ const Services = () => {
             <Row className ="align-items-center m-3 ">
                 <Col xs={12} lg={7}>
                     <div className='service-image-con mb-5 mr-5'>
-                        <Image className='serviceimg-relative' src = {require('../../Images/service/servicemainimage.png')} fluid = {true} alt = 'services' >
+                        <Image  className='serviceimg-relative' src = {require('../../Images/service/servicemainimage.png')} fluid = {true} alt = 'services' >
                            
                         </Image> 
 

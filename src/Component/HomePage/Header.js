@@ -1,6 +1,9 @@
 import React from 'react'
 import guyLesson from "../../Images/Home/guy-lesson 2.png"
 import "./header.css"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Header = () => {
   return (
     <div className='container p-5 mt-md-5'>
@@ -14,7 +17,8 @@ const Header = () => {
       </div>
       <div className='col-md-6 mt-md-3'>
         <div className='header-right-content mt-3 text-center'>
-          <img src={guyLesson} className='guylesson img-fluid' alt='Guy Learning'></img>
+          <LazyLoadImage src={guyLesson} className='guylesson img-fluid' alt='Guy Learning' effect='blur' />
+          
         </div>
       </div>
     </div>

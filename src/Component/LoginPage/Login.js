@@ -9,6 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import Image1 from "../../Images/Login/Rectangle 4597.png";
 import Footer from '../Footer';
 import './Login.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -84,7 +87,7 @@ const Login = () => {
 
 
             <Col lg={6} >
-              <img src={Image1} alt="No" className='img-fluid' />
+              <LazyLoadImage  src={Image1} alt="No" effect='blur' className='img-fluid' />
             </Col>
 
           </Row>

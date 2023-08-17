@@ -9,6 +9,8 @@ import WsImages from './WsImages'
 import WsEmpty from './WsEmpty'
 import CollapseImage from './CollapseImage'
 import {BsBook} from 'react-icons/bs'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const SenHeader = () => {
   return (
     <>
@@ -32,9 +34,9 @@ const SenHeader = () => {
             </div>
             <div className='col-lg-5 col-sm-12 col-12 hero-sec position-relative'>
               <div className='images'>
-                <img className='img img-fluid col-img-fluid img1' src={Img4} alt='img5' />
+                <LazyLoadImage effect='blur' className='img img-fluid col-img-fluid img1' src={Img4} alt='img5' />
                 <i><BsBook /></i>
-                <img className='img img-fluid img2' src={Img5} alt='img1' />
+                <LazyLoadImage effect='blur' className='img img-fluid img2' src={Img5} alt='img1' />
               </div>
 
               <ul className='trans-box col-xl-8 col-lg-8 col-md-4 col-sm-5 col-8 '>

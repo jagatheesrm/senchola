@@ -1,13 +1,16 @@
 import React from 'react'
 import EmptyImage from '../../Images/whysen/img9.jpg'
 import { BsCheck,BsBook } from 'react-icons/bs'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const WsEmpty = () => {
   return (
     <div className='container ws-empty position-relative'>
          <div className='row'>
             <div className='col-lg-6 col-md-12 emp-img position-relative'>
                 <i><BsBook/></i>
-                <img src={EmptyImage} alt='EmptyImage' className='img-fluid'/>
+                <LazyLoadImage src={EmptyImage} alt='EmptyImage' effect='blur' className='img-fluid'/>
                 <ul className='trans-box col-lg-5 shadow-lg'>
                     <li><i className='mx-2'><BsCheck/></i>Build remote teams</li>
                     <li className='mx-3'>faster with senchola</li>

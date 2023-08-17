@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import orange from "../../Images/Knowledge/orange.png";
 import "./feature-3.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 // import { Container } from 'react-bootstrap';
 const Feature3 = () => {
   return (
@@ -10,7 +12,8 @@ const Feature3 = () => {
       <div className='feature3-main-content  d-lg-flex flex-lg-row flex-md-row '>
         {/* Left Section */}
         <div className='feature3-left-content  '>
-          <img src={orange} className='orange' alt='Orange' />
+          <LazyLoadImage src={orange} className='orange' alt='Orange' effect='blur'/>
+          
           <div className='feature3-box'>
             <div className="row">
               <div className="col-md-10 col-lg-8">

@@ -6,6 +6,8 @@ import Team2 from '../Images/team2.jpg'
 import Team3 from '../Images/team3.jpg'
 import Right from '../Images/Right.png'
 import { FiBookOpen } from 'react-icons/fi'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const Aboutsen = () => {
   return (
     <div className='about-sen'>
@@ -43,16 +45,16 @@ const Aboutsen = () => {
 
                 <div className='col-md-6 col-sm-12 d-flex three-img'>
                      <div className='one-img'>
-                         <img src={Team1} className="img img-fluid" alt="team1"/>
+                         <LazyLoadImage effect='blur' src={Team1} className="img img-fluid" alt="team1"/>
                      </div>
                      <div className='two-img'>
-                         <img src={Team2} className="img img-fluid" alt="team2"/>
-                         <img src={Team3} className="img img-fluid" alt="team3"/>
+                         <LazyLoadImage effect='blur' src={Team2} className="img img-fluid" alt="team2"/>
+                         <LazyLoadImage effect='blur' src={Team3} className="img img-fluid" alt="team3"/>
                      </div>
                 </div>
 
                 <div className='background-img col-3'>
-                     <img src={Right} alt="Left" className='img img-fluid'/>
+                     <LazyLoadImage effect='blur' src={Right} alt="Left" className='img img-fluid'/>
                 </div>
             </div>
          </div>

@@ -1,7 +1,8 @@
 import React from 'react';
 import {Col, Container, Row} from 'react-bootstrap'
 import Carousel from 'react-bootstrap/Carousel'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Banner = () => {
   return (
@@ -11,7 +12,7 @@ const Banner = () => {
               
                     <Carousel >
                     <Carousel.Item>
-                        <img
+                        <LazyLoadImage
                         className="d-block w-100"
                         src= {require('../../Images/service/banner1.png')}
                         alt="First slide"
@@ -19,8 +20,8 @@ const Banner = () => {
                     
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
-                        className="d-block w-100"
+                        <LazyLoadImage
+                        className="d-block w-100" 
                         src= {require('../../Images/service/banner2.png')}
                         alt="Second slide"
                         />
@@ -28,7 +29,7 @@ const Banner = () => {
                         
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <LazyLoadImage
                         className="d-block w-100"
                         src= {require('../../Images/service/banner3.png')}
                         alt="Third slide"
@@ -37,7 +38,7 @@ const Banner = () => {
                 
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
+                        <LazyLoadImage
                         className="d-block w-100"
                         src= {require('../../Images/service/banner4.png')}  
                         alt="Fourth slide"
