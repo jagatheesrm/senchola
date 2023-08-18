@@ -16,7 +16,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -28,7 +28,8 @@ const Login = () => {
       });
 
       if (response.status === 200) {
-        setIsLoggedIn(true);
+        const token = response.data.token;
+        localStorage.setItem('token', token);
         navigate('/dashboard');
       } else {
         toast.error('Login failed. Please check your credentials.');
@@ -78,7 +79,7 @@ const Login = () => {
                     />
                   </div>
                   <button type="submit" className="login-button">
-                    {isLoggedIn ? 'Logout' : 'Login'}
+                    Login
                   </button>
                 </form>
                 <ToastContainer position="bottom-right" />
@@ -92,7 +93,7 @@ const Login = () => {
 
           </Row>
         </Container>
-        
+
       </div>
       <Footer />
     </div>

@@ -43,6 +43,7 @@ const Form = () => {
         draggable: true,
         progress: undefined,
       });
+      window.alert('Registration successful! Please check your email to create a password and login.');
     } catch (error) {
       console.error('Error registering user:', error);
       if (error.response && error.response.data && error.response.data.message) {

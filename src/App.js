@@ -3,7 +3,7 @@ import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import About1 from "./Component/About1";
 import Contact from './Component/Contact/Contact';
-import Dashboard from './Component/Dashboard';
+import Dashboard from './Component/Dashboard/Dashboard';
 import GeneratePassword from './Component/GeneratePassword';
 import HomePage from './Component/HomePage/Home';
 import Login from './Component/LoginPage/Login';
