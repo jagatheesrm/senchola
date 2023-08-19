@@ -1,0 +1,35 @@
+
+
+
+.app{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+}
+
+.app .con{
+    padding: 10px 20px;
+}
+
+@media screen and (max-width:1000px ){
+    .app{
+        grid-template-columns: 150px 1fr;
+    }
+}
+
+@media screen and (max-width:850px){
+    .app{
+        grid-template-columns: 50px 1fr;
+    }
+}
+
+@media screen and (max-width:450px){
+    .app .con{
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width:350px){
+    .app .con{
+        padding: 10px 5px;
+    }
+}

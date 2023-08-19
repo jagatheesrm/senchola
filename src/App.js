@@ -1,9 +1,9 @@
 import React from 'react';
-import { Route, HashRouter as Router, Routes } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes ,Navigate , Redirect } from 'react-router-dom';
 import './App.css';
 import About1 from "./Component/About1";
 import Contact from './Component/Contact/Contact';
-import Dashboard from './Component/Dashboard/Dashboard';
+import Dashboard from "./User/DashBoard/Component/DashBoard/MainPage"
 import GeneratePassword from './Component/GeneratePassword';
 import HomePage from './Component/HomePage/Home';
 import Login from './Component/LoginPage/Login';
@@ -11,13 +11,15 @@ import SignUp from "./Component/SignUp";
 import SenHeader from "./Component/Whyssenchola/SenHeader";
 import Form from './Component/form_page/Form';
 import Service from './Component/service_page/ServiceApp';
+import PrivateRoute from './PrivateRoute';
 import Navbar from './Navbar';
 function App() {
+  
   return (
     <>
       <Router Router basename="/">
         <div>
-          <Navbar />
+        <Navbar/>
           <main>
             <Routes>
               <Route path="/senheader" element={<SenHeader />} />
@@ -30,12 +32,14 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/generate-password/:token" element={<GeneratePassword />} />
               <Route path='/' element={<HomePage />} exact />
+            
             </Routes>
           </main>
         </div>
       </Router>
     </>
   );
+  
 }
 
 export default App;

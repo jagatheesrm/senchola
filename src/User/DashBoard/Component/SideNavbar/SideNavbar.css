@@ -1,0 +1,123 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+  }
+  ::selection{
+    background-color: var(--secondary-color);
+    color:white;
+  }
+  :root{
+    --bg-d-color:white;
+    --primary-color:rgb(133, 191, 133);
+    --secondary-color:rgb(83, 152, 83);
+    --ternary-color:black;
+  }
+
+.Dnavbar{
+   height: 100vh;
+   width: 100%;
+   background-color: var(--bg-d-color);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 10px 20px;
+   position: sticky;
+   top:0px;
+   font-size: 1rem;
+}
+.Dnavbar .Dlogo{
+    padding-top: 20px;
+}
+.Dnavbar .Dlogo .Dtitle{
+    color:var(--primary-color);
+    font-weight: 800;
+    font-size: 1rem;
+}
+.Dnavbar .Dmenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:100px;
+}
+
+.Dnavbar .Dmenu .Dmenu-list{
+    margin: 7px 0px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+.Dnavbar .Dmenu .Dmenu-list:hover{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color:white;
+}
+.Dnavbar .Dmenu .Dmenu-list span{
+    margin-left: 20px;
+}
+.Dnavbar .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    position:absolute;
+    bottom: 50px;
+}
+.Dnavbar .info .info-list:hover{
+    background-color: var(--secondary-color);
+    color:white;
+    border-radius: 10px;
+}
+.Dnavbar .info .info-list{
+    text-decoration: none;
+    color:black;
+    padding: 10px 20px;
+    margin: 7px 0px;
+    width: 100%;
+}
+.Dnavbar .info .info-list span{
+    margin-left: 15px;
+}
+
+.Dmenu-list:hover{
+    background-color: var(--secondary-color);
+    transition: .3s ease-in-out;
+    color:white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:1000px){
+    .Dnavbar{
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+    .Dnavbar .info{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:850px){
+    .Dnavbar{
+        padding: 0px 10px;
+    }
+    .Dnavbar .info{
+        width: 100%;
+    }
+    .Dnavbar .Dlogo{
+        display: none;
+    }
+    .Dnavbar .Dmenu .Dmenu-list span{
+        display: none;
+    }
+    .Dnavbar .Dmenu .Dmenu-list i{
+        font-size: 1rem;
+    }
+    .Dnavbar .info .info-list span{
+        display: none;
+    }
+    .Dnavbar .info .info-list i{
+        font-size: 1rem;
+    }
+}
