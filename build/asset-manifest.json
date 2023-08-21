@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/senchola/static/css/main.501a914c.css",
-    "main.js": "/senchola/static/js/main.0a675b84.js",
+    "main.css": "/senchola/static/css/main.e20dad9a.css",
+    "main.js": "/senchola/static/js/main.e87debf2.js",
     "static/js/787.c5269106.chunk.js": "/senchola/static/js/787.c5269106.chunk.js",
     "static/media/team3.jpg": "/senchola/static/media/team3.7284e4b721e6ac1c8ae6.jpg",
     "static/media/team4.jpg": "/senchola/static/media/team4.7db43f77ecc5b6c7e136.jpg",
@@ -9,6 +9,7 @@
     "static/media/banner4.png": "/senchola/static/media/banner4.2db0e80729c150950b74.png",
     "static/media/Rectangle 4592.png": "/senchola/static/media/Rectangle 4592.8a65fa98ebba7cd1d309.png",
     "static/media/team1.jpg": "/senchola/static/media/team1.214d04d83866660466a7.jpg",
+    "static/media/presentation.jpg": "/senchola/static/media/presentation.520a8d835b3acc5f2229.jpg",
     "static/media/team2.jpg": "/senchola/static/media/team2.fc27001366a7290ac9e9.jpg",
     "static/media/img8.jpg": "/senchola/static/media/img8.91a3e2583ed30bd87995.jpg",
     "static/media/img5.jpg": "/senchola/static/media/img5.62c886f00bbd8fdefb21.jpg",
@@ -20,8 +21,10 @@
     "static/media/banner2.png": "/senchola/static/media/banner2.e7d466d9c3957b596cbe.png",
     "static/media/banner1.png": "/senchola/static/media/banner1.27b7a906f2ceb4a1e2ce.png",
     "static/media/img9.jpg": "/senchola/static/media/img9.f58bfee3359d2d6b9160.jpg",
+    "static/media/pro.jpg": "/senchola/static/media/pro.6a6df5fc12fcb53e01b4.jpg",
     "static/media/sign uo.jpg": "/senchola/static/media/sign uo.7d34e1cabfc80c5c88c5.jpg",
     "static/media/img7.jpg": "/senchola/static/media/img7.a64d81a4e0d564be4eb9.jpg",
+    "static/media/meeting.jpg": "/senchola/static/media/meeting.978e3e4e17d03fe230bf.jpg",
     "static/media/Right.png": "/senchola/static/media/Right.1481d7ed82de96e8c6ee.png",
     "static/media/img6.jpg": "/senchola/static/media/img6.b796120a514882cdfd2c.jpg",
     "static/media/profile3.jpg": "/senchola/static/media/profile3.304023d37bef9d655fe3.jpg",
@@ -41,12 +44,12 @@
     "static/media/Rectangle 19.png": "/senchola/static/media/Rectangle 19.c0e8cd2aaf4d7e0b6f5d.png",
     "static/media/Rectangle 20.png": "/senchola/static/media/Rectangle 20.509289f6122bb8983ebd.png",
     "index.html": "/senchola/index.html",
-    "main.501a914c.css.map": "/senchola/static/css/main.501a914c.css.map",
-    "main.0a675b84.js.map": "/senchola/static/js/main.0a675b84.js.map",
+    "main.e20dad9a.css.map": "/senchola/static/css/main.e20dad9a.css.map",
+    "main.e87debf2.js.map": "/senchola/static/js/main.e87debf2.js.map",
     "787.c5269106.chunk.js.map": "/senchola/static/js/787.c5269106.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.501a914c.css",
-    "static/js/main.0a675b84.js"
+    "static/css/main.e20dad9a.css",
+    "static/js/main.e87debf2.js"
   ]
 }
