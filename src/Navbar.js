@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+ 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -12,6 +13,7 @@ const Navbar = () => {
 
 
   return (
+   
     <nav className="navbar">
       <div className="navbar-brand">Senchola university<span className='text text-success'>.</span></div>
       <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>

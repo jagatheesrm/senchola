@@ -3,19 +3,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Image1 from "../../Images/Login/Rectangle 4597.png";
+import { useAuth } from '../../auth';
 import Footer from '../Footer';
 import './Login.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const Login = () => {
+const Login = ( ) => {
+  const auth= useAuth();
+  auth.ismaketrue(false);
+  
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  
+  const handleislogin=()=>{
+
+    auth.ismaketrue(true);
+
+  }
+ 
 
 
   const handleLogin = async (e) => {
@@ -30,9 +41,14 @@ const Login = () => {
       if (response.status === 200) {
         const token = response.data.token;
         localStorage.setItem('token', token);
+        handleislogin();
         navigate('/dashboard');
+     
+        
+        
       } else {
         toast.error('Login failed. Please check your credentials.');
+      
       }
     } catch (error) {
       console.error('Error logging in:', error);
@@ -40,6 +56,7 @@ const Login = () => {
       if (error.response) {
         if (error.response.status === 401) {
           toast.error('Invalid email or password. Please try again.');
+           
         } else {
           toast.error('An error occurred. Please try again later.');
         }

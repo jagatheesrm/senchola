@@ -11,6 +11,7 @@ const GeneratorPassword = () => {
   const [passwordData, setPasswordData] = useState({
     password: '',
     confirmPassword: '',
+    email: '',
   });
   const [showPassword, setShowPassword] = useState(false);
   const handleChange = (e) => {
@@ -26,7 +27,8 @@ const GeneratorPassword = () => {
     try {
       const response = await axios.post('http://localhost:5000/api/generate-password', {
         token0: token,
-        password: passwordData.password
+        password: passwordData.password,
+        email: passwordData.email
       });
       if (response.status === 200) {
         toast.success('Password set successfully!');
@@ -53,6 +55,16 @@ const GeneratorPassword = () => {
     </div>
       
       <div className="password-form d-flex flex-column  my-5">
+      <label htmlFor="email" className='mb-1'>Email</label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className='p-2'
+                  name="email"
+                  value={passwordData.email}
+                  onChange={handleChange}
+                  required
+                />
         <label htmlFor="password" className='mb-1'>New Password:</label>
         <input
           type={showPassword ? 'password' : 'text'}

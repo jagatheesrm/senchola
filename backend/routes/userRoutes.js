@@ -11,23 +11,30 @@ const authMiddleware = require('../middleware/authMiddleware');
 router.post('/register', UserController.registerUser);
 // Generate Password
 router.post('/generate-password', async (req, res) => {
-    const { token0, password } = req.body;
+    const { email, token, password } = req.body; // Change 'token0' to 'token'
 
     try {
-        const user = await User.findOne({ password: token0 });
+        const user = await User.findOne({ email: email, passwordResetToken: token });
         if (!user) {
-            return res.status(400).json({ message: 'Invalid token' });
+            return res.status(400).json({ message: 'Invalid token or email' });
         }
+
         const hashedPassword = await bcrypt.hash(password, 10);
         user.password = hashedPassword;
         user.password = password;
         await user.save();
+
         res.status(200).json({ message: 'Password set successfully' });
     } catch (error) {
         console.error('Error setting password:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+// POST /api/forgot-password
+router.post('/forgot-password', UserController.sendPasswordResetEmail);
+
+// POST /api/reset-password
+router.post('/reset-password', UserController.resetPassword);
 //Login
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;

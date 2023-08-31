@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './jees.css';
-import './whysen.css'
 import App from './App';
+import { AuthProvider } from './auth';
+import './jees.css';
 import reportWebVitals from './reportWebVitals';
+import './whysen.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AuthProvider>
     <App />
+    </AuthProvider>
   </React.StrictMode>
 );
 

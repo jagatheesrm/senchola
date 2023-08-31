@@ -1,9 +1,8 @@
 import React from 'react';
-import { Route, HashRouter as Router, Routes ,Navigate , Redirect } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import About1 from "./Component/About1";
 import Contact from './Component/Contact/Contact';
-import Dashboard from "./User/DashBoard/Component/DashBoard/MainPage"
 import GeneratePassword from './Component/GeneratePassword';
 import HomePage from './Component/HomePage/Home';
 import Login from './Component/LoginPage/Login';
@@ -11,15 +10,21 @@ import SignUp from "./Component/SignUp";
 import SenHeader from "./Component/Whyssenchola/SenHeader";
 import Form from './Component/form_page/Form';
 import Service from './Component/service_page/ServiceApp';
-import PrivateRoute from './PrivateRoute';
 import Navbar from './Navbar';
+import ProtectdRoute from './ProtectdRoute';
+import Dashboard from "./User/DashBoard/Component/DashBoard/MainPage";
+import { useAuth } from './auth';
+
 function App() {
   
+const  auth=useAuth();
+const authuser=auth.user;
   return (
     <>
-      <Router Router basename="/">
+   
+       <Router Router basename="/">
         <div>
-        <Navbar/>
+        {authuser ? " " : <Navbar/>} 
           <main>
             <Routes>
               <Route path="/senheader" element={<SenHeader />} />
@@ -28,7 +33,11 @@ function App() {
               <Route path="/form" element={<Form />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard" 
+              element={
+                <ProtectdRoute>
+              <Dashboard />
+              </ProtectdRoute>} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/generate-password/:token" element={<GeneratePassword />} />
               <Route path='/' element={<HomePage />} exact />
@@ -36,10 +45,19 @@ function App() {
             </Routes>
           </main>
         </div>
-      </Router>
+      </Router> 
+    
+
+    
+        
+ 
+
+  
+
     </>
   );
   
 }
 
 export default App;
+
