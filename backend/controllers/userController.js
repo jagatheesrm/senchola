@@ -119,7 +119,7 @@ const UserController = {
         await user.save();
   
         // Send password reset email
-        const resetLink = `${process.env.CLIENT_URL}/reset-password/${token}`;
+        const resetLink = `${process.env.CLIENT_URL}/reset-password/${token}?email=${user.email}`;
         const emailContent = `Click the following link to reset your password: ${resetLink}`;
   
         // Reuse the existing transporter for sending emails

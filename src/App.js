@@ -12,8 +12,10 @@ import Form from './Component/form_page/Form';
 import Service from './Component/service_page/ServiceApp';
 import Navbar from './Navbar';
 import ProtectdRoute from './ProtectdRoute';
+import Unauthorized from './Unauthorized';
 import Dashboard from "./User/DashBoard/Component/DashBoard/MainPage";
 import { useAuth } from './auth';
+
 
 function App() {
   
@@ -33,6 +35,7 @@ const authuser=auth.user;
               <Route path="/form" element={<Form />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/unauth" element={<Unauthorized />} />
               <Route path="/dashboard" 
               element={
                 <ProtectdRoute>

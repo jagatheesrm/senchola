@@ -1,12 +1,11 @@
 import React from 'react'
-import { AiFillHome } from 'react-icons/ai'
-import { SiGoogleclassroom } from 'react-icons/si'
-import { AiFillSchedule, AiFillSetting } from 'react-icons/ai'
-import { TiGroup } from 'react-icons/ti'
+import { AiFillHome, AiFillSchedule, AiFillSetting } from 'react-icons/ai'
+import { BiSolidHelpCircle, BiSolidMessageAltDetail } from 'react-icons/bi'
 import { GiUpgrade } from 'react-icons/gi'
-import { BiSolidMessageAltDetail, BiSolidHelpCircle } from 'react-icons/bi'
-import { NavLink } from 'react-router-dom'
 import { HiOutlineLogout } from 'react-icons/hi'
+import { SiGoogleclassroom } from 'react-icons/si'
+import { TiGroup } from 'react-icons/ti'
+import { NavLink } from 'react-router-dom'
 import "./SideNavbar.css"
 const SideNavbar = () => {
   return (

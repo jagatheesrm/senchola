@@ -98,6 +98,10 @@ const Login = ( ) => {
                   <button type="submit" className="login-button">
                     Login
                   </button>
+                  <div className="form-group">
+                    <span><a href='#/forgetpassword'>Forgot Password ? </a>
+                    </span>
+                  </div>
                 </form>
                 <ToastContainer position="bottom-right" />
               </div>
