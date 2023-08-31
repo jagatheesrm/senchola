@@ -11,7 +11,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 router.post('/register', UserController.registerUser);
 // Generate Password
 router.post('/generate-password', async (req, res) => {
-    const { email, token, password } = req.body; // Change 'token0' to 'token'
+    const { email, token, password } = req.body;
 
     try {
         const user = await User.findOne({ email: email, passwordResetToken: token });
@@ -19,9 +19,8 @@ router.post('/generate-password', async (req, res) => {
             return res.status(400).json({ message: 'Invalid token or email' });
         }
 
-        const hashedPassword = await bcrypt.hash(password, 10);
-        user.password = hashedPassword;
-        user.password = password;
+        const hashedPassword = await bcrypt.hash(password, 10); // Hash the password
+        user.password = hashedPassword; // Store hashed password in the database
         await user.save();
 
         res.status(200).json({ message: 'Password set successfully' });
@@ -35,7 +34,8 @@ router.post('/forgot-password', UserController.sendPasswordResetEmail);
 
 // POST /api/reset-password
 router.post('/reset-password', UserController.resetPassword);
-//Login
+
+// POST Login data
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
@@ -47,9 +47,11 @@ router.post('/login', async (req, res) => {
         }
 
         // Compare plain text password with hashed password
-        if (password !== user.password) {
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if (!isPasswordValid) {
             return res.status(401).json({ message: 'Invalid password' });
         }
+
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
         res.status(200).json({ message: 'Login successful', token });

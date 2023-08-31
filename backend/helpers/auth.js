@@ -1,4 +1,5 @@
 const User  = require('../models/User');
+const bcrypt = require('bcryptjs');
 
 // Reset user's password using the token
 async function resetUserPassword(email, token, newPassword) {
@@ -13,7 +14,9 @@ async function resetUserPassword(email, token, newPassword) {
     }
 
     // Update user's password
-    user.password = newPassword;
+    const hashedPassword = await bcrypt.hash(newPassword, 10); // Hash the password
+        user.password = hashedPassword; // Store hashed password in the database
+        await user.save()
     user.passwordResetToken = undefined;
     user.passwordResetExpires = undefined;
     await user.save();
