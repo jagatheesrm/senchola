@@ -1,13 +1,13 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react';
 import Chart from "react-apexcharts";
-import './Dashboard.css'
-import Presentaion from '../../DImages/presentation.jpg'
-import Meeting from '../../DImages/meeting.jpg'
-import {AiFillCheckCircle,AiOutlineFieldTime} from 'react-icons/ai'
-import {CgProfile} from 'react-icons/cg'
-import {MdDateRange} from 'react-icons/md'
+import { AiFillCheckCircle, AiOutlineFieldTime } from 'react-icons/ai';
+import { CgProfile } from 'react-icons/cg';
+import { MdDateRange } from 'react-icons/md';
+import Meeting from '../../DImages/meeting.jpg';
+import Presentaion from '../../DImages/presentation.jpg';
+import './Dashboard.css';
 const Dashboard = () => {
-  const [state,setState] = useState({
+  const [state] = useState({
     options: {
       chart: {
         id: "basic-bar"

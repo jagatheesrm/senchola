@@ -17,6 +17,12 @@ const authMiddleware = async (req, res, next) => {
         }
 
         req.user = user;
+
+        // Check user's role for authorization
+        if (req.route.role && req.user.role !== req.route.role) {
+            return res.status(403).json({ message: 'Access denied' });
+        }
+
         next();
     } catch (error) {
         return res.status(401).json({ message: 'Invalid token' });

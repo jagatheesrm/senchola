@@ -82,6 +82,7 @@ const UserController = {
         wantToLearn,
         hasLaptop,
         howDidYouKnow,
+        role: null,
       });
 
       newUser.password = req.body.password;
