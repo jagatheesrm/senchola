@@ -1,0 +1,213 @@
+:root{
+    --bg-d-color:white;
+    --primary-color:rgb(133, 191, 133);
+    --secondary-color:rgb(83, 152, 83);
+    --ternary-color:black;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 2.5fr 2fr;
+    grid-gap: 10px 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+.dashboard .graph{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.dashboard .graph h3{
+    margin-left: 60px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.dashboard .graph .chart{
+   width: 80%;
+   margin: auto;
+}
+.dashboard .calendar{
+    background-color: aquamarine;
+    
+}
+.calendar{
+    width: 100%;
+}
+.calendar .cal{
+    width: 100%;
+}
+
+/* Works Projects And Table */
+
+.works{
+    display: grid;
+    grid-template-columns: 2.5fr 2fr;
+    grid-gap: 10px 20px;
+    margin-top: 20px;
+}
+
+.works .project{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    min-height: 50vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: grid;
+    grid-template-areas: 'presen meeting'
+    'table table';
+    padding: 20px;
+}
+.works .project .project-list-1{
+    display: grid;
+    grid-area: presen;
+    grid-gap: 10px 20px;
+    padding: 0px 10px;
+    width: 100%;
+}
+.works .project .table{
+    margin:20px 0px;
+    grid-area: table;
+}
+.works .project .project-list-2{
+    display: grid;
+    grid-area: meeting;
+    grid-gap: 5px 20px;
+    padding: 0px 10px;
+    width: 100%;
+}
+.works .project .project-list-1 img,.works .project .project-list-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    background-size:100%;
+    object-position: center;
+    border-radius: 10px;
+}
+.works .project .project-list-1 h4,.works .project .project-list-2 h4{
+    font-size: 1.15rem;
+}
+.works .project .table{
+    grid-area: table;
+}
+.works .meeting{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    min-height: 50vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* Meeting */
+
+.meeting{
+    padding: 20px;
+}
+
+.meeting .meeting-alert{
+    padding: 10px;
+    background-color: rgb(224, 255, 218);
+    margin: 15px 0px;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.meeting .meeting-alert .conducter{
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.meeting .meeting-alert .btn-join{
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color: white;
+    margin: 10px 10px;
+}
+@media screen and (max-width:1050px){
+    .dashboard .graph .chart{
+        width: 100%;
+    }
+    .dashboard .graph h3{
+        margin-left: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .works{
+       grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:767px){
+    .dashboard{
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+    .works .project{
+        grid-template-areas: 'presen presen'
+        'meeting meeting'
+        'table table';
+    }
+    .works .project .project-list-2{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .works .project .table tbody tr td,.works .project .table thead tr th{
+        font-size: 12px;
+    }
+    .works .project .project-list-1 h4,.works .project .project-list-2 h4{
+        font-size: 14px;
+    }
+    .works .project .project-list-2{
+        padding: 0px 2px;
+    }
+    .works .project .project-list-1{
+        padding: 0px 2px;
+    }
+    .works .project{
+        padding: 10px;
+    }
+    .meeting .meeting-alert .conducter .icon span{
+        font-size: 13px !important;
+    }
+    .meeting .meeting-alert .conducter{
+        font-size: 13px !important;
+    }
+    .meeting .meeting-alert .conducter span{
+        font-size: 13px !important;
+    }
+    .meeting .meeting-alert .btn-join{
+        font-size: 12px;
+    }
+    .meeting .meet-headline .date h6,.meeting .meet-headline .date span{
+        font-size: 14px;
+    }
+    .meeting .meeting-alert .conducter{
+        padding: 15px 2px;
+    }
+    .meeting{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .works .project .table tbody tr td,.works .project .table thead tr th{
+        font-size: 10px;
+    }
+    .meeting .meeting-alert .conducter .icon span{
+        font-size: 10px !important;
+        font-weight: 600;
+    }
+    .meeting .meeting-alert .conducter .icon i{
+        font-size: 10px !important;
+        font-weight: 600;
+    }
+    .meeting .meeting-alert .conducter i{
+        font-size: 10px !important;
+        font-weight: 600;
+    }
+}

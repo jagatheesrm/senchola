@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import { Form } from 'react-bootstrap';
-import { BsArrowLeft } from "react-icons/bs";
 import { FiKey } from "react-icons/fi";
+import { BsArrowLeft } from "react-icons/bs";
 // import NewPassword from './NewPassword';
 import './forgotpage.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 function ForgetPassword() {
 

@@ -5,28 +5,21 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { useNavigate, Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Image1 from "../../Images/Login/Rectangle 4597.png";
-import { useAuth } from '../../auth';
 import Footer from '../Footer';
 import './Login.css';
 
-
 const Login = ( ) => {
-  const auth= useAuth();
-  auth.ismaketrue(false);
+ 
   
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
-  const handleislogin=()=>{
 
-    auth.ismaketrue(true);
-
-  }
  
 
 
@@ -42,8 +35,15 @@ const Login = ( ) => {
       if (response.status === 200) {
         const token = response.data.token;
         localStorage.setItem('token', token);
-        handleislogin();
-        navigate('/dashboard');
+        const role=response.data.role;
+        if(role==="admin"){
+          navigate('/admin-dashboard');
+
+        }else{
+          navigate('/dashboard');
+
+        }
+        
      
         
         
@@ -99,9 +99,7 @@ const Login = ( ) => {
                   <button type="submit" className="login-button">
                     Login
                   </button>
-                  <div className="form-group">
-                  <Link to='/forgot-password' > Forget Password ?</Link>
-                  </div>
+                  <Link to='/forgot-password' > Forget Password </Link>
                 </form>
                 <ToastContainer position="bottom-right" />
               </div>

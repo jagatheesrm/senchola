@@ -1,6 +1,7 @@
 const express = require('express');
 const { connectToDatabase } = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
+const adminRoutes = require('./routes/adminRoutes')
 const cors = require('cors');
 const crypto = require('crypto');
 const os = require('os'); // Import the os module
@@ -17,14 +18,14 @@ process.env.JWT_SECRET = JWT_SECRET;
 
 connectToDatabase();
 
-app.use('/api', userRoutes);
+app.use('/api', userRoutes, adminRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   const networkInterfaces = os.networkInterfaces();
   let serverIpAddress;
 
