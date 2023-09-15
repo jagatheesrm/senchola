@@ -25,7 +25,7 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
   const networkInterfaces = os.networkInterfaces();
   let serverIpAddress;
 

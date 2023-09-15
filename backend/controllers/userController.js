@@ -155,7 +155,7 @@ const UserController = {
       const { email, token, newPassword } = req.body;
 
       // Verify the token and reset the user's password
-      const resetResult = await resetUserPassword(email, token, newPassword);
+      const resetResult = await resetUserPassword(token, email, newPassword);
 
       if (resetResult.success) {
         res.status(200).json({ message: 'Password reset successful.' });

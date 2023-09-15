@@ -42,6 +42,23 @@ const AdminDashboard = () => {
       </div>
     );
   }
+  const deleteUserByEmail = (email) => {
+    axios
+      .delete(`http://localhost:5000/api/admin-dashboard/${email}`, {
+        headers: {
+          Authorization: `${authToken}`,
+        },
+      })
+      .then((response) => {
+        // Handle success, e.g., remove the user from the state
+        const deletedUser = response.data.deletedUser;
+        setUsers((prevUsers) => prevUsers.filter((user) => user.email !== deletedUser.email));
+      })
+      .catch((error) => {
+        console.error('Error deleting user:', error);
+        // Handle the error, e.g., show an error message to the user
+      });
+  };
 
   return (
     <div className="container-fluid">
@@ -94,7 +111,7 @@ const AdminDashboard = () => {
                 <button className="btn btn-primary mr-2">
                   <i className="fa fa-pencil" aria-hidden="true"><ImPencil /></i>
                 </button>
-                <button className="btn btn-danger">
+                <button className="btn btn-danger" onClick={() => deleteUserByEmail(user.email)}>
                   <i className="fa fa-trash" aria-hidden="true"><ImBin2 /></i>
                 </button>
               </td>
