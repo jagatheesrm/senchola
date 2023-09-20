@@ -25,7 +25,7 @@ const GeneratorPassword = () => {
   const navigate = useNavigate();
   const handleGeneratePassword = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/generate-password', {
+      const response = await axios.post('https://senchola.waranj38.repl.co/api/generate-password', {
         token0: token,
         password: passwordData.password,
         email: passwordData.email

@@ -11,7 +11,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/admin-dashboard', {
+      .get('https://senchola.waranj38.repl.co/api/admin-dashboard', {
         headers: {
           Authorization: `${authToken}`,
         },

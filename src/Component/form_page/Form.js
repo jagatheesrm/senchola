@@ -33,7 +33,7 @@ const Form = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/register', formData);
+      const response = await axios.post('https://senchola.waranj38.repl.co/api/register', formData);
       toast.success(response.data.message, {
         position: 'top-center',
         autoClose: 5000,

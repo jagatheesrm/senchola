@@ -27,7 +27,7 @@ const Login = ( ) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post('https://senchola.waranj38.repl.co/api/login', {
         email,
         password,
       });

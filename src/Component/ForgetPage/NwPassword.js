@@ -21,7 +21,7 @@ function NewPassword() {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/reset-password', {
+            const response = await axios.post('https://senchola.waranj38.repl.co/api/reset-password', {
                 email,
                 token,
                 newPassword: password,

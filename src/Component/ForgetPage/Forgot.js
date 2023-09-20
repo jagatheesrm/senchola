@@ -22,7 +22,7 @@ function ForgetPassword() {
   const handelForgetPassword = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/forgot-password', { email })
+      const response = await axios.post('https://senchola.waranj38.repl.co/api/forgot-password', { email })
       if (response.status === 200) {
         navigate('/emailget')
       }
