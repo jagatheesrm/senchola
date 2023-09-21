@@ -44,7 +44,7 @@ const AdminDashboard = () => {
   }
   const deleteUserByEmail = (email) => {
     axios
-      .delete(`http://localhost:5000/api/admin-dashboard/${email}`, {
+      .delete(`https://senchola.waranj38.repl.co/api/admin-dashboard/${email}`, {
         headers: {
           Authorization: `${authToken}`,
         },
